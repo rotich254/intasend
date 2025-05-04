@@ -2,31 +2,23 @@ services:
   - type: web
     name: intasend-payment
     env: python
-    buildCommand: pip install -r requirements.txt
+    plan: free
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: gunicorn intasend_payment.wsgi:application
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: intasend_db
-          property: connectionString
+        value: sqlite:///db/db.sqlite3
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
         value: false
       - key: ALLOWED_HOSTS
-        value: ".onrender.com"
+        value: ".onrender.com,localhost,127.0.0.1"
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: DJANGO_SETTINGS_MODULE
         value: intasend_payment.settings
-    buildFilter:
-      paths:
-        - requirements.txt
-        - "**.py"
-        - templates/**
-        - static/**
-
-databases:
-  - name: intasend_db
-    databaseName: intasend
-    user: intasend 
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/db
+      sizeGB: 1 

@@ -5,4 +5,4 @@ psycopg2-binary>=2.9.9
 dj-database-url>=2.1.0
 whitenoise>=6.6.0
 gunicorn>=21.2.0
-intasend>=1.0.0 
+intasend-python>=1.0.0 

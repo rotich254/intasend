@@ -3,7 +3,7 @@
 set -o errexit
 
 # Create directory for SQLite database on persistent disk if needed
-mkdir -p db
+mkdir -p db 2>/dev/null || true
 
 # Install dependencies
 pip install -r requirements.txt
