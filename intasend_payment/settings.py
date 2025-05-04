@@ -88,9 +88,19 @@ WSGI_APPLICATION = 'intasend_payment.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# Check if using SQLite and adjust path for Render's persistent disk if needed
+database_url = env('DATABASE_URL', default='sqlite:///db.sqlite3')
+if database_url.startswith('sqlite'):
+    # For Render persistent disk, ensure the db directory exists
+    if not os.path.exists('db'):
+        os.makedirs('db', exist_ok=True)
+    # Use the persistent disk location if it's a SQLite database
+    if not database_url.endswith('/db/db.sqlite3'):
+        database_url = 'sqlite:///db/db.sqlite3'
+
 DATABASES = {
     'default': dj_database_url.config(
-        default=env('DATABASE_URL', default='sqlite:///db.sqlite3'),
+        default=database_url,
         conn_max_age=600
     )
 }

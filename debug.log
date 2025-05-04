@@ -886,3 +886,7 @@ INFO 2025-05-04 15:53:56,167 autoreload C:\Users\Admin\Desktop\projects\intasend
 INFO 2025-05-04 15:53:57,440 autoreload Watching for file changes with StatReloader
 INFO 2025-05-04 15:58:57,298 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
 INFO 2025-05-04 15:58:58,835 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 16:00:13,512 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 16:00:15,625 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 16:05:18,797 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 16:05:21,413 autoreload Watching for file changes with StatReloader
