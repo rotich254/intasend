@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Payment Status{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                Payment Status
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    {% if payment.status == 'complete' %}
+                    <span class="badge bg-success">Completed</span>
+                    {% elif payment.status == 'pending' %}
+                    <span class="badge bg-warning text-dark">Pending</span>
+                    {% else %}
+                    <span class="badge bg-danger">Failed</span>
+                    {% endif %}
+                </h5>
+                
+                <div class="mt-4">
+                    <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
+                    <p><strong>Reference:</strong> {{ payment.reference }}</p>
+                    <p><strong>Date:</strong> {{ payment.created_at }}</p>
+                    <p><strong>Last Updated:</strong> {{ payment.updated_at }}</p>
+                </div>
+                
+                {% if payment.status == 'pending' %}
+                <div class="alert alert-info mt-3">
+                    <p>Your payment is still being processed. Please check back later.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="d-grid mt-4">
+            <a href="{% url 'home' %}" class="btn btn-primary">Back to Payment Form</a>
+        </div>
+    </div>
+</div>
+{% endblock %} 
