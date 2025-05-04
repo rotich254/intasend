@@ -1,0 +1,886 @@
+INFO 2025-05-04 10:57:11,106 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:57:11,175 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:57:11,177 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:57:11,388 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:57:11,657 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:57:56,773 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 10:57:57,156 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 10:57:57,182 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 10:57:57,204 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 10:57:57,287 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 10:58:02,550 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:58:02,714 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:58:02,719 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:58:02,919 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:58:02,924 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 10:58:12,837 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:00:16,780 basehttp "GET / HTTP/1.1" 200 3480
+INFO 2025-05-04 11:00:16,903 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:00:16,903 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:00:32,161 views Processing payment attempt for amount: 100.0
+INFO 2025-05-04 11:00:32,192 views Created payment record with reference: payment-27c2eab2
+INFO 2025-05-04 11:00:32,193 views Calling Intasend API with: phone=254726502526, email=rotichk254@gmail.com, amount=100.0, reference=payment-27c2eab2
+INFO 2025-05-04 11:00:32,795 views Checkout Response: {"id": "7e8dc2c3-5451-4219-8628-993742b478d7", "url": "https://sandbox.intasend.com/checkout/7e8dc2c3-5451-4219-8628-993742b478d7/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDciXSwiaWF0IjoxNzQ2MzQ1NjMzLCJleHAiOjE3NDYzNDkyMzMsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDcifQ.wGsmqdrcq6i9Scj5Z2OhostBY-Fx4I5Y75B_WCCtKV8", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "254726502526", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-27c2eab2", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 100.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T11:00:33.435004+03:00", "updated_at": "2025-05-04T11:00:33.435023+03:00"}
+INFO 2025-05-04 11:00:33,050 views Payment checkout created successfully: 7e8dc2c3-5451-4219-8628-993742b478d7
+INFO 2025-05-04 11:00:33,056 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:01:48,531 views Payment callback received: GET - <QueryDict: {'tracking_id': ['R54GBXY'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDciXSwiaWF0IjoxNzQ2MzQ1NjM0LCJleHAiOjE3NDYzNDkyMzQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDcifQ.GlJWZdz3d-SzfRA6NTOdG8RrAmShEmO7zSzyL-4IMEw'], 'checkout_id': ['7e8dc2c3-5451-4219-8628-993742b478d7']}>
+INFO 2025-05-04 11:01:48,545 views Processing callback for checkout ID: 7e8dc2c3-5451-4219-8628-993742b478d7, status: 
+INFO 2025-05-04 11:01:48,562 views Found payment record: 10
+INFO 2025-05-04 11:01:48,562 views Checking payment status with Intasend for invoice ID: 7e8dc2c3-5451-4219-8628-993742b478d7
+INFO 2025-05-04 11:01:49,012 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:01:49,013 views Detected payment status: None
+INFO 2025-05-04 11:01:49,019 views Payment marked as FAILED
+INFO 2025-05-04 11:01:49,026 basehttp "GET /callback/?tracking_id=R54GBXY&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDciXSwiaWF0IjoxNzQ2MzQ1NjM0LCJleHAiOjE3NDYzNDkyMzQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDcifQ.GlJWZdz3d-SzfRA6NTOdG8RrAmShEmO7zSzyL-4IMEw&checkout_id=7e8dc2c3-5451-4219-8628-993742b478d7 HTTP/1.1" 200 2940
+INFO 2025-05-04 11:03:41,017 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:41,107 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:41,111 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:41,171 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:42,074 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:42,101 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:03:44,448 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:03:45,403 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:03:46,048 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:03:46,232 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:03:46,236 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:03:46,451 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:05:17,618 views Payment callback received: GET
+INFO 2025-05-04 11:05:17,619 views Callback GET parameters: <QueryDict: {'tracking_id': ['R54GBXY'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDciXSwiaWF0IjoxNzQ2MzQ1NjM0LCJleHAiOjE3NDYzNDkyMzQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDcifQ.GlJWZdz3d-SzfRA6NTOdG8RrAmShEmO7zSzyL-4IMEw'], 'checkout_id': ['7e8dc2c3-5451-4219-8628-993742b478d7']}>
+INFO 2025-05-04 11:05:17,620 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 11:05:17,620 views Processing callback for checkout ID: 7e8dc2c3-5451-4219-8628-993742b478d7, status: 
+INFO 2025-05-04 11:05:17,621 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 11:05:17,625 views Found payment record by checkout_id: 10
+INFO 2025-05-04 11:05:17,630 views Checking payment status with Intasend for invoice ID: 7e8dc2c3-5451-4219-8628-993742b478d7
+INFO 2025-05-04 11:05:18,098 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:05:18,100 views Detected payment status from API: None
+INFO 2025-05-04 11:05:18,100 views Using status from URL: success
+INFO 2025-05-04 11:05:18,110 views Payment marked as COMPLETE
+INFO 2025-05-04 11:05:18,153 basehttp "GET /callback/?tracking_id=R54GBXY&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDciXSwiaWF0IjoxNzQ2MzQ1NjM0LCJleHAiOjE3NDYzNDkyMzQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI3ZThkYzJjMy01NDUxLTQyMTktODYyOC05OTM3NDJiNDc4ZDcifQ.GlJWZdz3d-SzfRA6NTOdG8RrAmShEmO7zSzyL-4IMEw&checkout_id=7e8dc2c3-5451-4219-8628-993742b478d7 HTTP/1.1" 200 2408
+INFO 2025-05-04 11:05:18,224 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:05:18,224 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:05:20,734 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:05:21,325 basehttp "GET / HTTP/1.1" 200 4563
+INFO 2025-05-04 11:06:21,470 views Processing payment attempt for amount: 1000.0
+INFO 2025-05-04 11:06:21,470 views Using TEST MODE: True
+INFO 2025-05-04 11:06:21,507 views Created payment record with reference: payment-87e4facd
+INFO 2025-05-04 11:06:21,509 views Calling Intasend API with: phone=254726502526, email=rotichk254@gmail.com, amount=1000.0, reference=payment-87e4facd
+INFO 2025-05-04 11:06:21,996 views Checkout Response: {"id": "651cf2e6-13a4-4b89-b13d-50acc3aa8f54", "url": "https://sandbox.intasend.com/checkout/651cf2e6-13a4-4b89-b13d-50acc3aa8f54/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQiXSwiaWF0IjoxNzQ2MzQ1OTgyLCJleHAiOjE3NDYzNDk1ODIsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQifQ.BK0ueeWFxtONsACFMHfvvmJeYdAGpBfFaPLrpcsPcag", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "254726502526", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-87e4facd", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 1000.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T11:06:22.651266+03:00", "updated_at": "2025-05-04T11:06:22.651289+03:00"}
+INFO 2025-05-04 11:06:22,005 views Payment checkout created successfully: 651cf2e6-13a4-4b89-b13d-50acc3aa8f54
+INFO 2025-05-04 11:06:22,006 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:07:05,110 views Payment callback received: GET
+INFO 2025-05-04 11:07:05,112 views Callback GET parameters: <QueryDict: {'tracking_id': ['Q23GM6Y'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQiXSwiaWF0IjoxNzQ2MzQ1OTgzLCJleHAiOjE3NDYzNDk1ODMsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQifQ.8JTPDgEUJg62S0t8mVfGqttdqHt_iPgXS1nZDB3HCAM'], 'checkout_id': ['651cf2e6-13a4-4b89-b13d-50acc3aa8f54']}>
+INFO 2025-05-04 11:07:05,117 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 11:07:05,123 views Processing callback for checkout ID: 651cf2e6-13a4-4b89-b13d-50acc3aa8f54, status: 
+INFO 2025-05-04 11:07:05,125 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 11:07:05,139 views Found payment record by checkout_id: 11
+INFO 2025-05-04 11:07:05,140 views Checking payment status with Intasend for invoice ID: 651cf2e6-13a4-4b89-b13d-50acc3aa8f54
+INFO 2025-05-04 11:07:05,765 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:07:05,765 views Detected payment status from API: None
+INFO 2025-05-04 11:07:05,766 views Using status from URL: success
+INFO 2025-05-04 11:07:05,773 views Payment marked as COMPLETE
+INFO 2025-05-04 11:07:05,775 basehttp "GET /callback/?tracking_id=Q23GM6Y&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQiXSwiaWF0IjoxNzQ2MzQ1OTgzLCJleHAiOjE3NDYzNDk1ODMsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2NTFjZjJlNi0xM2E0LTRiODktYjEzZC01MGFjYzNhYThmNTQifQ.8JTPDgEUJg62S0t8mVfGqttdqHt_iPgXS1nZDB3HCAM&checkout_id=651cf2e6-13a4-4b89-b13d-50acc3aa8f54 HTTP/1.1" 200 2412
+INFO 2025-05-04 11:07:21,543 views Checking status for payment ID: 11
+INFO 2025-05-04 11:07:21,544 views Checking payment status with Intasend for checkout ID: 651cf2e6-13a4-4b89-b13d-50acc3aa8f54
+INFO 2025-05-04 11:07:21,944 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:07:21,944 views Detected payment status: None
+INFO 2025-05-04 11:07:21,948 basehttp "GET /status/11/ HTTP/1.1" 200 3050
+INFO 2025-05-04 11:08:56,161 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:56,481 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:56,534 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:56,536 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:56,544 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:56,968 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:08:57,052 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:09:00,943 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,014 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,131 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,136 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,174 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,287 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:01,397 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:06,653 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:06,998 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:07,025 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:07,293 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:07,465 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:07,675 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:07,699 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\urls.py changed, reloading.
+INFO 2025-05-04 11:09:10,253 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:10,479 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:10,814 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:11,130 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:12,066 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:12,910 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:09:13,120 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:28,816 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,109 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,129 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,175 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,216 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,229 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:29,260 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:10:33,126 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:33,311 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:33,538 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:33,614 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:34,037 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:34,236 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:10:34,330 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:11:25,672 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:11:34,730 basehttp "GET / HTTP/1.1" 200 5716
+INFO 2025-05-04 11:11:34,824 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:11:35,906 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:11:56,167 views Processing payment attempt for amount: 1000.0
+INFO 2025-05-04 11:11:56,168 views Using TEST MODE: True
+INFO 2025-05-04 11:11:56,212 views Created payment record with reference: payment-a4eed89e
+INFO 2025-05-04 11:11:56,213 views Calling Intasend API with: phone=254726502526, email=rotichk254@gmail.com, amount=1000.0, reference=payment-a4eed89e
+INFO 2025-05-04 11:11:56,824 views Checkout Response: {"id": "24874090-cba7-471c-bcb2-95be115e19cf", "url": "https://sandbox.intasend.com/checkout/24874090-cba7-471c-bcb2-95be115e19cf/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YiXSwiaWF0IjoxNzQ2MzQ2MzE3LCJleHAiOjE3NDYzNDk5MTcsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YifQ.qDYPd2jdeQjXP5K6Pk7l9NWk9wCc3PnjFPpdV8JTBq8", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "254726502526", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-a4eed89e", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 1000.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T11:11:57.447318+03:00", "updated_at": "2025-05-04T11:11:57.447349+03:00"}
+INFO 2025-05-04 11:11:56,834 views Payment checkout created successfully: 24874090-cba7-471c-bcb2-95be115e19cf
+INFO 2025-05-04 11:11:56,835 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:12:44,347 views Payment callback received: GET
+INFO 2025-05-04 11:12:44,352 views Callback GET parameters: <QueryDict: {'tracking_id': ['R9E7VVR'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YiXSwiaWF0IjoxNzQ2MzQ2MzE4LCJleHAiOjE3NDYzNDk5MTgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YifQ.P7eZnfANaepp7TIWLyRJerCF6VoytbUKpMzvL1GZnJ0'], 'checkout_id': ['24874090-cba7-471c-bcb2-95be115e19cf']}>
+INFO 2025-05-04 11:12:44,353 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 11:12:44,355 views Processing callback for checkout ID: 24874090-cba7-471c-bcb2-95be115e19cf, status: 
+INFO 2025-05-04 11:12:44,356 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 11:12:44,372 views Found payment record by checkout_id: 12
+INFO 2025-05-04 11:12:44,374 views Checking payment status with Intasend for invoice ID: 24874090-cba7-471c-bcb2-95be115e19cf
+INFO 2025-05-04 11:12:44,837 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:12:44,837 views Detected payment status from API: None
+INFO 2025-05-04 11:12:44,838 views Using status from URL: success
+INFO 2025-05-04 11:12:44,846 views Payment marked as COMPLETE
+INFO 2025-05-04 11:12:44,854 basehttp "GET /callback/?tracking_id=R9E7VVR&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YiXSwiaWF0IjoxNzQ2MzQ2MzE4LCJleHAiOjE3NDYzNDk5MTgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIyNDg3NDA5MC1jYmE3LTQ3MWMtYmNiMi05NWJlMTE1ZTE5Y2YifQ.P7eZnfANaepp7TIWLyRJerCF6VoytbUKpMzvL1GZnJ0&checkout_id=24874090-cba7-471c-bcb2-95be115e19cf HTTP/1.1" 200 3565
+INFO 2025-05-04 11:12:56,527 basehttp "GET / HTTP/1.1" 200 5716
+INFO 2025-05-04 11:15:27,925 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:16:06,361 basehttp "GET / HTTP/1.1" 200 6490
+INFO 2025-05-04 11:16:06,439 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:16:06,440 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:16:10,484 basehttp "GET /login/?next=/reports/ HTTP/1.1" 200 4281
+INFO 2025-05-04 11:16:15,291 basehttp "GET / HTTP/1.1" 200 6490
+INFO 2025-05-04 11:16:17,737 basehttp "GET /login/?next=/reports/ HTTP/1.1" 200 4281
+INFO 2025-05-04 11:17:53,094 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:17:59,089 basehttp "GET /login/?next=/reports/ HTTP/1.1" 200 4281
+INFO 2025-05-04 11:18:13,318 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:18:13,539 basehttp "GET /reports/ HTTP/1.1" 200 19873
+INFO 2025-05-04 11:18:25,949 views Checking status for payment ID: 12
+INFO 2025-05-04 11:18:25,976 views Checking payment status with Intasend for checkout ID: 24874090-cba7-471c-bcb2-95be115e19cf
+INFO 2025-05-04 11:18:26,756 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:18:26,757 views Detected payment status: None
+INFO 2025-05-04 11:18:26,764 basehttp "GET /status/12/ HTTP/1.1" 200 5371
+INFO 2025-05-04 11:18:35,836 views Checking status for payment ID: 12
+INFO 2025-05-04 11:18:35,836 views Checking payment status with Intasend for checkout ID: 24874090-cba7-471c-bcb2-95be115e19cf
+INFO 2025-05-04 11:18:36,270 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:18:36,271 views Detected payment status: None
+INFO 2025-05-04 11:18:36,274 basehttp "GET /status/12/ HTTP/1.1" 200 5371
+INFO 2025-05-04 11:19:41,873 basehttp "GET /reports/?export=csv HTTP/1.1" 200 846
+INFO 2025-05-04 11:20:10,940 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:20:15,465 basehttp "GET /reports/ HTTP/1.1" 200 19873
+INFO 2025-05-04 11:21:03,380 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:03,408 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:03,662 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:03,691 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:03,799 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:03,884 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:04,260 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:04,270 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:04,328 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:21:08,028 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,101 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,134 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,255 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,391 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,486 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:08,788 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:09,117 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:09,474 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:25,819 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:25,868 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:25,877 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:25,933 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:26,266 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:26,370 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:26,769 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:26,772 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:21:32,184 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,330 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,362 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,371 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,516 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,627 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,634 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,717 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:21:32,750 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:48,204 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,214 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,259 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,338 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,437 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,456 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,702 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,820 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:48,970 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\models.py changed, reloading.
+INFO 2025-05-04 11:29:53,316 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:53,540 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:53,886 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:54,077 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:54,223 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:54,236 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:54,286 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:54,373 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:29:55,080 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:12,383 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:12,387 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:12,390 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:12,513 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:12,787 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:12,891 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:13,122 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:13,114 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:13,161 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:30:18,852 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:19,092 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:19,155 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:19,294 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:19,363 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:20,138 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:20,153 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:20,154 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:30:20,468 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:31:01,396 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:33:10,132 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:33:10,214 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:33:10,218 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:33:32,997 views Processing payment attempt for amount: 133.0
+INFO 2025-05-04 11:33:32,998 views Using TEST MODE: True
+INFO 2025-05-04 11:33:33,063 views Created payment record with reference: payment-bacd955b
+INFO 2025-05-04 11:33:33,064 views Calling Intasend API with: phone=254726502526, email=rotichk254@gmail.com, amount=133.0, reference=payment-bacd955b
+INFO 2025-05-04 11:33:33,624 views Checkout Response: {"id": "a121042a-8ba8-4033-a38d-d5ae846e1e60", "url": "https://sandbox.intasend.com/checkout/a121042a-8ba8-4033-a38d-d5ae846e1e60/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAiXSwiaWF0IjoxNzQ2MzQ3NjE0LCJleHAiOjE3NDYzNTEyMTQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAifQ.sZ-SIvUYxGoq6baIbXYS3i5udhAkKYQc44xcefyuuuU", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "254726502526", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-bacd955b", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 133.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T11:33:34.266902+03:00", "updated_at": "2025-05-04T11:33:34.266921+03:00"}
+INFO 2025-05-04 11:33:33,634 views Payment checkout created successfully: a121042a-8ba8-4033-a38d-d5ae846e1e60
+INFO 2025-05-04 11:33:33,636 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:34:19,662 views Payment callback received: GET
+INFO 2025-05-04 11:34:19,670 views Callback GET parameters: <QueryDict: {'tracking_id': ['R07GO8Q'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAiXSwiaWF0IjoxNzQ2MzQ3NjE0LCJleHAiOjE3NDYzNTEyMTQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAifQ.sZ-SIvUYxGoq6baIbXYS3i5udhAkKYQc44xcefyuuuU'], 'checkout_id': ['a121042a-8ba8-4033-a38d-d5ae846e1e60']}>
+INFO 2025-05-04 11:34:19,671 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 11:34:19,672 views Processing callback for checkout ID: a121042a-8ba8-4033-a38d-d5ae846e1e60, status: 
+INFO 2025-05-04 11:34:19,673 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 11:34:19,680 views Found payment record by checkout_id: 13
+INFO 2025-05-04 11:34:19,682 views Checking payment status with Intasend for invoice ID: a121042a-8ba8-4033-a38d-d5ae846e1e60
+INFO 2025-05-04 11:34:20,105 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:34:20,105 views Detected payment status from API: None
+INFO 2025-05-04 11:34:20,106 views Detected payment method: unknown
+INFO 2025-05-04 11:34:20,106 views Using status from URL: success
+INFO 2025-05-04 11:34:20,117 views Payment marked as COMPLETE
+INFO 2025-05-04 11:34:20,125 basehttp "GET /callback/?tracking_id=R07GO8Q&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAiXSwiaWF0IjoxNzQ2MzQ3NjE0LCJleHAiOjE3NDYzNTEyMTQsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiJhMTIxMDQyYS04YmE4LTQwMzMtYTM4ZC1kNWFlODQ2ZTFlNjAifQ.sZ-SIvUYxGoq6baIbXYS3i5udhAkKYQc44xcefyuuuU&checkout_id=a121042a-8ba8-4033-a38d-d5ae846e1e60 HTTP/1.1" 200 5040
+INFO 2025-05-04 11:34:36,808 views Checking status for payment ID: 13
+INFO 2025-05-04 11:34:36,808 views Checking payment status with Intasend for checkout ID: a121042a-8ba8-4033-a38d-d5ae846e1e60
+INFO 2025-05-04 11:34:37,241 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:34:37,243 views Detected payment status: None
+INFO 2025-05-04 11:34:37,254 basehttp "GET /status/13/ HTTP/1.1" 200 6073
+INFO 2025-05-04 11:34:41,751 basehttp "GET /reports/ HTTP/1.1" 200 29545
+ERROR 2025-05-04 11:35:32,219 log Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Admin\Desktop\projects\intasend\payment\views.py", line 458, in payment_reports
+    return render(request, 'payment/reports.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaultfilters.py", line 852, in divisibleby
+    return int(value) % int(arg) == 0
+           ~~~~~~~~~~~^~~~~~~~~~
+ZeroDivisionError: integer modulo by zero
+ERROR 2025-05-04 11:35:32,253 basehttp "GET /reports/?status=&payment_method=mpesa&date_from=&date_to=&search= HTTP/1.1" 500 181602
+INFO 2025-05-04 11:36:58,640 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:58,691 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:58,708 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:58,756 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:58,786 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:58,845 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:59,471 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:59,679 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:59,862 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:36:59,800 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:37:04,374 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,469 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,659 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,819 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,893 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,898 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:04,940 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:05,037 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:05,107 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:37:05,395 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:38:31,757 basehttp "GET /reports/?status=&payment_method=mpesa&date_from=&date_to=&search= HTTP/1.1" 200 11912
+INFO 2025-05-04 11:38:36,344 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:38:39,018 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:38:46,949 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:39:17,138 views Processing payment attempt for amount: 100.0
+INFO 2025-05-04 11:39:17,139 views Using TEST MODE: True
+INFO 2025-05-04 11:39:17,179 views Created payment record with reference: payment-16f5b151
+INFO 2025-05-04 11:39:17,180 views Calling Intasend API with: phone=254726502526, email=rotichk254@gmail.com, amount=100.0, reference=payment-16f5b151
+INFO 2025-05-04 11:39:17,761 views Checkout Response: {"id": "6f5a7631-0d3f-46fe-b12f-ac430b86adbb", "url": "https://sandbox.intasend.com/checkout/6f5a7631-0d3f-46fe-b12f-ac430b86adbb/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIiXSwiaWF0IjoxNzQ2MzQ3OTU4LCJleHAiOjE3NDYzNTE1NTgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIifQ.Y5-wHF3_yCDKaGcXE1TyIv1aI4udsxyi6LMPap0PXwM", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "254726502526", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-16f5b151", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 100.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T11:39:18.388579+03:00", "updated_at": "2025-05-04T11:39:18.388615+03:00"}
+INFO 2025-05-04 11:39:17,772 views Payment checkout created successfully: 6f5a7631-0d3f-46fe-b12f-ac430b86adbb
+INFO 2025-05-04 11:39:17,774 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:41:19,326 views Payment callback received: GET
+INFO 2025-05-04 11:41:19,326 views Callback GET parameters: <QueryDict: {'tracking_id': ['YVO398Q'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIiXSwiaWF0IjoxNzQ2MzQ3OTU4LCJleHAiOjE3NDYzNTE1NTgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIifQ.Y5-wHF3_yCDKaGcXE1TyIv1aI4udsxyi6LMPap0PXwM'], 'checkout_id': ['6f5a7631-0d3f-46fe-b12f-ac430b86adbb']}>
+INFO 2025-05-04 11:41:19,327 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 11:41:19,328 views Processing callback for checkout ID: 6f5a7631-0d3f-46fe-b12f-ac430b86adbb, status: 
+INFO 2025-05-04 11:41:19,328 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 11:41:19,337 views Found payment record by checkout_id: 14
+INFO 2025-05-04 11:41:19,338 views Checking payment status with Intasend for invoice ID: 6f5a7631-0d3f-46fe-b12f-ac430b86adbb
+INFO 2025-05-04 11:41:19,770 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:41:19,771 views Detected payment status from API: None
+INFO 2025-05-04 11:41:19,771 views Detected payment method: unknown
+INFO 2025-05-04 11:41:19,771 views Using status from URL: success
+INFO 2025-05-04 11:41:19,779 views Payment marked as COMPLETE
+INFO 2025-05-04 11:41:19,790 basehttp "GET /callback/?tracking_id=YVO398Q&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIiXSwiaWF0IjoxNzQ2MzQ3OTU4LCJleHAiOjE3NDYzNTE1NTgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiI2ZjVhNzYzMS0wZDNmLTQ2ZmUtYjEyZi1hYzQzMGI4NmFkYmIifQ.Y5-wHF3_yCDKaGcXE1TyIv1aI4udsxyi6LMPap0PXwM&checkout_id=6f5a7631-0d3f-46fe-b12f-ac430b86adbb HTTP/1.1" 200 5040
+INFO 2025-05-04 11:41:19,870 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:41:19,875 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:41:39,261 basehttp "GET /reports/ HTTP/1.1" 200 31242
+INFO 2025-05-04 11:42:06,096 views Checking status for payment ID: 14
+INFO 2025-05-04 11:42:06,097 views Checking payment status with Intasend for checkout ID: 6f5a7631-0d3f-46fe-b12f-ac430b86adbb
+INFO 2025-05-04 11:42:06,911 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 11:42:06,911 views Detected payment status: None
+INFO 2025-05-04 11:42:06,919 basehttp "GET /status/14/ HTTP/1.1" 200 6085
+INFO 2025-05-04 11:42:10,243 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:43:03,789 basehttp "GET /reports/ HTTP/1.1" 200 31242
+INFO 2025-05-04 11:44:23,488 basehttp "GET /reports/ HTTP/1.1" 200 31368
+INFO 2025-05-04 11:44:42,595 basehttp "GET /reports/?status=&payment_method=mpesa&date_from=&date_to=&search= HTTP/1.1" 200 12038
+INFO 2025-05-04 11:44:48,859 basehttp "GET /reports/?status=&payment_method=unknown&date_from=&date_to=&search= HTTP/1.1" 200 31376
+INFO 2025-05-04 11:46:09,685 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:09,733 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:09,888 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:09,937 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,242 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,256 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,362 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,500 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,761 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:10,831 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:15,434 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:15,521 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:15,666 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:15,788 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:15,973 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:16,061 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:16,355 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:16,361 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:16,905 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:17,195 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:45,704 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:45,742 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,072 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,118 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,405 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,586 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,763 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,772 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,902 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:46,922 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:46:51,882 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:51,979 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,180 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,200 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,249 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,253 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,270 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,424 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:52,424 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:46:55,740 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:47:40,233 basehttp "GET /reports/?status=&payment_method=unknown&date_from=&date_to=&search= HTTP/1.1" 200 31376
+INFO 2025-05-04 11:47:47,808 basehttp "GET / HTTP/1.1" 200 7138
+INFO 2025-05-04 11:47:50,145 basehttp "GET /reports/ HTTP/1.1" 200 31368
+INFO 2025-05-04 11:48:24,461 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:24,497 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:24,550 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:24,615 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:24,809 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:25,117 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:25,150 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:25,311 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:25,483 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:25,428 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:48:30,155 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,214 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,490 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,495 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,543 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,658 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:30,659 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:31,143 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:31,763 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:48:34,268 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:16,198 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,608 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,749 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,801 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,810 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,894 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,918 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:16,961 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:17,024 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:17,158 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\urls.py changed, reloading.
+INFO 2025-05-04 11:49:21,829 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:22,387 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:22,547 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:22,712 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:22,736 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:23,767 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:23,779 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:23,822 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:25,112 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:49:25,368 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:50:11,020 basehttp "GET /reports/ HTTP/1.1" 200 31368
+INFO 2025-05-04 11:50:11,079 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 11:50:11,080 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 11:50:19,078 basehttp "GET /admin/ HTTP/1.1" 200 7179
+INFO 2025-05-04 11:50:19,470 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22154
+INFO 2025-05-04 11:50:19,496 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-05-04 11:50:19,533 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-05-04 11:50:19,564 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-05-04 11:50:19,581 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16632
+INFO 2025-05-04 11:50:19,587 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-05-04 11:50:19,907 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-05-04 11:50:19,920 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-05-04 11:50:19,920 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-05-04 11:50:23,055 basehttp "POST /admin/logout/ HTTP/1.1" 200 3579
+INFO 2025-05-04 11:50:25,815 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:50:26,019 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4184
+INFO 2025-05-04 11:50:26,097 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-05-04 11:50:29,383 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:50:29,401 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4184
+INFO 2025-05-04 11:50:30,180 basehttp "GET /reports/ HTTP/1.1" 302 0
+WARNING 2025-05-04 11:50:30,203 log Not Found: /accounts/login/
+WARNING 2025-05-04 11:50:30,204 basehttp "GET /accounts/login/?next=/reports/ HTTP/1.1" 404 4072
+INFO 2025-05-04 11:50:33,181 basehttp "GET / HTTP/1.1" 200 6667
+INFO 2025-05-04 11:50:40,452 basehttp "GET /register/ HTTP/1.1" 200 5404
+INFO 2025-05-04 11:51:22,645 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:22,798 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:22,928 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:22,944 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,224 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,262 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,354 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,809 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,543 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:23,569 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:51:29,986 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,160 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,306 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,307 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,355 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,688 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,849 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:30,929 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:31,276 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:31,545 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:48,373 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:48,460 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:48,553 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:48,562 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:48,672 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:48,871 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:49,334 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:49,371 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:49,396 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:49,462 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:51:54,017 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:54,380 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:54,646 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:54,779 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:54,844 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:55,080 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:55,125 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:55,719 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:55,810 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:51:58,466 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:00,154 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:01,002 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:01,696 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:02,068 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:03,327 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:03,441 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:03,446 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:04,023 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:07,492 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:07,764 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:07,800 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:08,056 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:08,142 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:08,155 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:08,676 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:09,038 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:10,809 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:11,300 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:17,768 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:17,939 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:20,126 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,158 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,266 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,353 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,373 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,480 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,826 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:20,943 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:25,431 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:25,684 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,179 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,341 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,558 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,622 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,753 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:26,920 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:32,840 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,051 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,173 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,358 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,585 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,589 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:33,550 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:34,052 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:34,805 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:35,598 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:52:41,607 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,608 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,721 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,731 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,803 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,836 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,925 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:41,922 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:42,084 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:42,863 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:52,589 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:52,637 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:52,730 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:52,753 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:52,799 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:52,939 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:53,040 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:53,086 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:53,262 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:53,411 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:52:57,641 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:57,743 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:57,746 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:57,818 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:57,831 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:57,930 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:58,381 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:58,448 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:58,849 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:52:59,161 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:53:06,647 basehttp "GET /register/ HTTP/1.1" 200 5422
+INFO 2025-05-04 11:53:09,379 basehttp "GET / HTTP/1.1" 200 6685
+INFO 2025-05-04 11:53:11,984 basehttp "GET / HTTP/1.1" 200 6685
+INFO 2025-05-04 11:53:14,444 basehttp "GET /login/?next=/reports/ HTTP/1.1" 200 4652
+INFO 2025-05-04 11:53:17,391 basehttp "GET / HTTP/1.1" 200 6685
+INFO 2025-05-04 11:53:19,807 basehttp "GET / HTTP/1.1" 200 6685
+INFO 2025-05-04 11:53:23,229 basehttp "GET /register/ HTTP/1.1" 200 5422
+INFO 2025-05-04 11:53:46,705 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2025-05-04 11:53:46,724 basehttp "GET / HTTP/1.1" 200 7152
+INFO 2025-05-04 11:53:50,670 basehttp "GET /reports/ HTTP/1.1" 200 31382
+INFO 2025-05-04 11:54:00,367 basehttp "GET / HTTP/1.1" 200 7152
+INFO 2025-05-04 11:54:12,768 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:12,772 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:12,845 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:54:12,926 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:12,940 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:12,964 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:13,097 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:54:13,177 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:54:13,439 autoreload C:\Users\Admin\Desktop\projects\intasend\payment\views.py changed, reloading.
+INFO 2025-05-04 11:54:13,480 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 11:54:17,870 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:17,921 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,006 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,020 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,205 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,208 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,290 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:18,340 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:19,067 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 11:54:19,607 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:14,418 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,553 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,683 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,704 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,796 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,816 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,827 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:14,861 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:17,535 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:19,144 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:19,150 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:20,786 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:20,861 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:21,040 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:21,059 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:21,686 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:21,920 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:34,427 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:34,664 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:34,747 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,117 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,117 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,217 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,257 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,263 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:35,434 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:02:39,661 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:39,823 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,105 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,172 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,255 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,265 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,429 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,593 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:02:40,602 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:19,019 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,181 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,189 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,396 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,647 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,680 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,713 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,782 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:19,877 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:05:25,139 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,145 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,149 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,230 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,268 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,385 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,430 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,415 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:05:25,482 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:02,394 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:14,902 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:14,976 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:14,977 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,124 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,120 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,182 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,162 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,561 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,725 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:15,997 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:06:19,526 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:19,790 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:19,845 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:19,857 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:19,905 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:20,013 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:20,118 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:20,129 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:20,350 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:20,643 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:06:48,690 basehttp "GET / HTTP/1.1" 200 7152
+INFO 2025-05-04 12:06:48,742 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 12:06:48,742 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 12:06:58,963 basehttp "GET /reports/ HTTP/1.1" 200 31382
+INFO 2025-05-04 12:07:50,667 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,739 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,705 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,707 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,740 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,750 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:50,753 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:51,383 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:51,725 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:51,736 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:07:57,095 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:00,608 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:02,294 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:02,655 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:02,655 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:03,000 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:03,130 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:03,356 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:03,453 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:08:03,552 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:03,400 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,533 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,555 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,618 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,709 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,719 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,757 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,886 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,966 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:03,968 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:08,950 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:14,693 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,000 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,193 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,249 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,313 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,598 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,798 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:15,979 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:16,198 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:34,009 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,083 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,434 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,576 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,600 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,832 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:34,937 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:35,186 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:35,189 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:35,416 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:10:56,549 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:56,591 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:57,286 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:57,377 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:57,853 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:58,463 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:58,747 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:10:59,743 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:11:01,432 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:11:02,019 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:17,203 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,207 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,286 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,293 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,323 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,374 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:17,794 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:19,608 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:19,859 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:20,854 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 12:12:30,700 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,307 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,318 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,381 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,569 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,680 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,752 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:31,942 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:32,033 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 12:12:33,714 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:13:56,167 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,235 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,319 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,326 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,673 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,852 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,896 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,905 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:56,944 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:13:57,209 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:14:02,565 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,167 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,413 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,496 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,502 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,632 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,804 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:06,935 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:07,395 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:14:08,344 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:41:40,361 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,446 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,513 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,557 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,594 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,644 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,741 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,773 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:40,854 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:41:41,212 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:44:13,741 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:44:22,359 basehttp "GET / HTTP/1.1" 200 6685
+INFO 2025-05-04 15:44:22,438 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2025-05-04 15:44:22,439 basehttp "GET /static/js/script.js HTTP/1.1" 304 0
+INFO 2025-05-04 15:44:30,645 basehttp "GET /login/ HTTP/1.1" 200 4451
+INFO 2025-05-04 15:44:41,642 basehttp "POST /login/ HTTP/1.1" 200 4619
+INFO 2025-05-04 15:44:47,112 basehttp "GET /register/ HTTP/1.1" 200 5422
+INFO 2025-05-04 15:45:05,615 basehttp "POST /register/ HTTP/1.1" 200 5758
+INFO 2025-05-04 15:46:04,343 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:46:10,919 basehttp "POST /register/ HTTP/1.1" 200 5753
+INFO 2025-05-04 15:46:11,975 basehttp "GET /login/ HTTP/1.1" 200 4451
+INFO 2025-05-04 15:46:13,199 basehttp "GET /login/ HTTP/1.1" 200 4451
+INFO 2025-05-04 15:46:28,168 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-05-04 15:46:30,182 basehttp "GET / HTTP/1.1" 200 7156
+INFO 2025-05-04 15:46:42,006 basehttp "GET /reports/ HTTP/1.1" 200 12048
+INFO 2025-05-04 15:47:17,840 basehttp "GET / HTTP/1.1" 200 7156
+INFO 2025-05-04 15:47:25,945 views Processing payment attempt for amount: 133.0
+INFO 2025-05-04 15:47:25,946 views Using TEST MODE: True
+INFO 2025-05-04 15:47:27,968 views Created payment record with reference: payment-11a11969
+INFO 2025-05-04 15:47:27,969 views Formatted phone number for sandbox: 25472650252
+INFO 2025-05-04 15:47:27,969 views Calling Intasend API with: phone=25472650252, email=rotichk254@gmail.com, amount=133.0, reference=payment-11a11969
+INFO 2025-05-04 15:47:28,475 views Checkout Response: {"id": "1626992e-5bae-4d32-94e8-d0660318a9c1", "url": "https://sandbox.intasend.com/checkout/1626992e-5bae-4d32-94e8-d0660318a9c1/express/", "signature": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEiXSwiaWF0IjoxNzQ2MzYyODQ4LCJleHAiOjE3NDYzNjY0NDgsImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEifQ.G798M2iqe9OFQ-5ItzZ1qBp63oN6zi1shWcrfyjlDYg", "methods": ["card", "apple-pay", "gpay", "mpesa"], "layout": "tabs", "styles": {"componentBackgroundColor": "#F7FAFC", "unselectedCardBackgroundColor": "#FFFFFF", "selectedCardBackgroundColor": "#FFFFFF", "selectedBorderColor": "2px solid #056BD5", "unselectedBorderColor": "2px solid #A0AEC0", "selectedFontColor": "#056BD5", "unselectedFontColor": "#333333", "selectedCardShadow": "0px 0px 7px rgba(5, 107, 213, 0.5)", "unselectedCardShadow": "none", "borderRadius": "10px", "inputLabelColor": "#000000", "inputTextColor": "#000", "inputBackgroundColor": "#FFFFFF", "inputBorderColor": "#CCCCCC", "inputBorderRadius": "10px", "ctaBgColor": "#056BD5", "ctaFontColor": "#fff", "fontFamily": "", "fontWeight": "light"}, "merchant_name": "INTASEND", "merchant_id": "VRKOVXQ", "merchant_origin": "payment.intasend.com", "first_name": "lawrence", "last_name": "rotich", "phone_number": "25472650252", "email": "rotichk254@gmail.com", "country": null, "address": null, "city": null, "state": null, "zipcode": null, "api_ref": "payment-11a11969", "wallet_id": null, "method": null, "channel": "WEBSITE", "host": "127.0.0.1", "is_mobile": false, "version": null, "redirect_url": "http://127.0.0.1:8000/callback/", "amount": 133.0, "currency": "KES", "paid": false, "mobile_tarrif": "BUSINESS-PAYS", "card_tarrif": "BUSINESS-PAYS", "bitcoin_tarrif": "BUSINESS-PAYS", "ach_tarrif": "BUSINESS-PAYS", "bank_tarrif": "BUSINESS-PAYS", "created_at": "2025-05-04T15:47:28.941297+03:00", "updated_at": "2025-05-04T15:47:28.941332+03:00"}
+INFO 2025-05-04 15:47:28,690 views Payment checkout created successfully: 1626992e-5bae-4d32-94e8-d0660318a9c1
+INFO 2025-05-04 15:47:28,692 basehttp "POST /checkout/ HTTP/1.1" 302 0
+INFO 2025-05-04 15:48:07,623 views Payment callback received: GET
+INFO 2025-05-04 15:48:07,624 views Callback GET parameters: <QueryDict: {'tracking_id': ['RXLD96R'], 'signature': ['eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEiXSwiaWF0IjoxNzQ2MzYyODQ5LCJleHAiOjE3NDYzNjY0NDksImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEifQ.UKJu0DQ7MfKwYAj1FGGkHkAPdXU6CVCES4DfmIhCYuk'], 'checkout_id': ['1626992e-5bae-4d32-94e8-d0660318a9c1']}>
+INFO 2025-05-04 15:48:07,625 views Callback POST parameters: <QueryDict: {}>
+INFO 2025-05-04 15:48:07,626 views Processing callback for checkout ID: 1626992e-5bae-4d32-94e8-d0660318a9c1, status: 
+INFO 2025-05-04 15:48:07,627 views Sandbox mode: simulating successful payment
+INFO 2025-05-04 15:48:09,364 views Found payment record by checkout_id: 1
+INFO 2025-05-04 15:48:09,365 views Checking payment status with Intasend for invoice ID: 1626992e-5bae-4d32-94e8-d0660318a9c1
+INFO 2025-05-04 15:48:09,797 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 15:48:09,798 views Detected payment status from API: None
+INFO 2025-05-04 15:48:09,798 views Detected payment method: unknown
+INFO 2025-05-04 15:48:09,799 views Using status from URL: success
+INFO 2025-05-04 15:48:10,017 views Payment marked as COMPLETE
+INFO 2025-05-04 15:48:10,454 basehttp "GET /callback/?tracking_id=RXLD96R&signature=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6ImV4cHJlc3MtY2hlY2tvdXQiLCJpc3MiOiJJbnRhU2VuZCBTb2x1dGlvbnMgTGltaXRlZCIsImF1ZCI6WyIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEiXSwiaWF0IjoxNzQ2MzYyODQ5LCJleHAiOjE3NDYzNjY0NDksImFjY291bnRJRCI6IlZSS09WWFEiLCJyZWZlcmVuY2UiOiIxNjI2OTkyZS01YmFlLTRkMzItOTRlOC1kMDY2MDMxOGE5YzEifQ.UKJu0DQ7MfKwYAj1FGGkHkAPdXU6CVCES4DfmIhCYuk&checkout_id=1626992e-5bae-4d32-94e8-d0660318a9c1 HTTP/1.1" 200 5057
+INFO 2025-05-04 15:48:19,422 views Checking status for payment ID: 1
+INFO 2025-05-04 15:48:19,423 views Checking payment status with Intasend for checkout ID: 1626992e-5bae-4d32-94e8-d0660318a9c1
+INFO 2025-05-04 15:48:19,868 views Status Response: {"detail": "Invoice with specified id does not exist"}
+INFO 2025-05-04 15:48:19,869 views Detected payment status: None
+INFO 2025-05-04 15:48:19,874 basehttp "GET /status/1/ HTTP/1.1" 200 7285
+INFO 2025-05-04 15:48:37,868 basehttp "GET / HTTP/1.1" 200 7156
+INFO 2025-05-04 15:48:43,950 basehttp "GET /reports/ HTTP/1.1" 200 13286
+INFO 2025-05-04 15:50:54,068 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:50:55,594 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:51:03,821 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:51:05,007 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:51:11,258 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:51:13,187 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 15:53:56,167 autoreload C:\Users\Admin\Desktop\projects\intasend\intasend_payment\settings.py changed, reloading.
+INFO 2025-05-04 15:53:57,440 autoreload Watching for file changes with StatReloader

@@ -3,40 +3,129 @@
 {% block title %}Payment Status{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">
-                Payment Status
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">
-                    {% if payment.status == 'complete' %}
-                    <span class="badge bg-success">Completed</span>
-                    {% elif payment.status == 'pending' %}
-                    <span class="badge bg-warning text-dark">Pending</span>
-                    {% else %}
-                    <span class="badge bg-danger">Failed</span>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Payment Status</h4>
+                    <small>Welcome, {{ user.username }}</small>
+                </div>
+                <div class="card-body">
+                    {% if sandbox_mode %}
+                    <div class="alert alert-info mb-4">
+                        <strong>Test Mode:</strong> This is a sandbox payment. No real money has been processed.
+                    </div>
                     {% endif %}
-                </h5>
-                
-                <div class="mt-4">
-                    <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
-                    <p><strong>Reference:</strong> {{ payment.reference }}</p>
-                    <p><strong>Date:</strong> {{ payment.created_at }}</p>
-                    <p><strong>Last Updated:</strong> {{ payment.updated_at }}</p>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            Payment Status
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {% if payment.status == 'complete' %}
+                                <span class="badge bg-success">Completed</span>
+                                {% elif payment.status == 'pending' %}
+                                <span class="badge bg-warning text-dark">Pending</span>
+                                {% else %}
+                                <span class="badge bg-danger">Failed</span>
+                                {% endif %}
+                            </h5>
+                            
+                            <div class="mt-4">
+                                <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
+                                <p><strong>Reference:</strong> {{ payment.reference }}</p>
+                                {% if payment.checkout_id %}
+                                <p><strong>Transaction ID:</strong> {{ payment.checkout_id }}</p>
+                                {% endif %}
+                                <p>
+                                    <strong>Payment Method:</strong> 
+                                    {% if payment.payment_method == 'mpesa' %}
+                                    <span class="badge bg-success">M-Pesa</span>
+                                    {% elif payment.payment_method == 'card' %}
+                                    <span class="badge bg-primary">Card Payment</span>
+                                    {% elif payment.payment_method == 'google_pay' %}
+                                    <span class="badge bg-info">Google Pay</span>
+                                    {% elif payment.payment_method == 'bank' %}
+                                    <span class="badge bg-dark">Bank Transfer</span>
+                                    {% else %}
+                                    <span class="badge bg-secondary">{{ payment.get_payment_method_display }}</span>
+                                    {% endif %}
+                                </p>
+                                <p><strong>Created:</strong> {{ payment.created_at|date:"Y-m-d H:i:s" }}</p>
+                                
+                                {% if payment.completed_at %}
+                                <p><strong>Completed:</strong> {{ payment.completed_at|date:"Y-m-d H:i:s" }}</p>
+                                <p><strong>Processing Time:</strong> {{ payment.completed_at|timeuntil:payment.created_at }}</p>
+                                {% endif %}
+                                
+                                {% if payment.payer_name or payment.payer_phone or payment.payer_email %}
+                                <hr>
+                                <h6>Customer Information</h6>
+                                {% if payment.payer_name %}<p><strong>Name:</strong> {{ payment.payer_name }}</p>{% endif %}
+                                {% if payment.payer_phone %}<p><strong>Phone:</strong> {{ payment.payer_phone }}</p>{% endif %}
+                                {% if payment.payer_email %}<p><strong>Email:</strong> {{ payment.payer_email }}</p>{% endif %}
+                                {% endif %}
+                            </div>
+                            
+                            {% if payment.status == 'pending' %}
+                            <div class="alert alert-info mt-3">
+                                <h5>Payment is Processing</h5>
+                                <p>Your payment is still being processed. This may take a few minutes.</p>
+                                <p>You can refresh this page to check for updates.</p>
+                                <button class="btn btn-outline-primary btn-sm mt-2" onclick="window.location.reload();">Refresh Status</button>
+                                
+                                {% if sandbox_mode %}
+                                <div class="mt-3">
+                                    <small><strong>Note:</strong> In sandbox mode, pending payments are automatically marked as successful after 1 minute for testing purposes.</small>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% elif payment.status == 'complete' %}
+                            <div class="alert alert-success mt-3">
+                                <h5>Payment Successful</h5>
+                                <p>Your payment has been successfully processed and confirmed.</p>
+                                <p>A confirmation has been sent to your email if provided.</p>
+                                
+                                {% if sandbox_mode %}
+                                <div class="mt-3">
+                                    <small><strong>Note:</strong> This is a sandbox payment for testing purposes only. No real money has been charged.</small>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% else %}
+                            <div class="alert alert-danger mt-3">
+                                <h5>Payment Failed</h5>
+                                <p>Your payment was not successful. This could be due to:</p>
+                                <ul>
+                                    <li>Insufficient funds</li>
+                                    <li>Payment was cancelled</li>
+                                    <li>Technical issue with the payment provider</li>
+                                    <li>Transaction timed out</li>
+                                </ul>
+                                <p>You may try again with the same or different payment method.</p>
+                                
+                                {% if sandbox_mode %}
+                                <div class="mt-3">
+                                    <small><strong>Troubleshooting:</strong> In sandbox mode, ensure you're using proper test credentials. For M-Pesa, use PIN 0000. For cards, use test number 4242 4242 4242 4242.</small>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4">
+                        <a href="{% url 'home' %}" class="btn btn-primary">Back to Payment Form</a>
+                        {% if payment.status == 'pending' %}
+                        <form method="get" action="{% url 'payment_status' payment.id %}">
+                            <button type="submit" class="btn btn-outline-secondary w-100">Check Status Again</button>
+                        </form>
+                        {% endif %}
+                    </div>
                 </div>
-                
-                {% if payment.status == 'pending' %}
-                <div class="alert alert-info mt-3">
-                    <p>Your payment is still being processed. Please check back later.</p>
-                </div>
-                {% endif %}
             </div>
-        </div>
-        
-        <div class="d-grid mt-4">
-            <a href="{% url 'home' %}" class="btn btn-primary">Back to Payment Form</a>
         </div>
     </div>
 </div>

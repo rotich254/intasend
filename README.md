@@ -9,6 +9,7 @@ A simple Django web application that integrates with Intasend payment gateway to
 - Support for multiple payment methods (M-Pesa, card, etc.)
 - Payment status tracking
 - Callback handling
+- Payment reports and analytics dashboard
 
 ## Setup Instructions
 
@@ -28,7 +29,7 @@ INTASEND_TEST_MODE = True  # Set to False for production
 python manage.py makemigrations
 python manage.py migrate
 ```
-5. Create a superuser for the admin panel:
+5. Create a superuser for the admin panel and reports access:
 ```
 python manage.py createsuperuser
 ```
@@ -51,6 +52,16 @@ To get API keys:
 2. Click "Proceed to Payment"
 3. Complete the payment on the Intasend checkout page
 4. You will be redirected back to the application with the payment result
+
+## Reports Dashboard
+
+To access the payment reports:
+
+1. Log in using the superuser account you created
+2. Navigate to the Reports page from the navigation menu
+3. View payment statistics and transaction history
+4. Filter reports by date, status, and reference
+5. Export data to CSV for further analysis
 
 ## Admin Interface
 

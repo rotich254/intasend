@@ -5,6 +5,12 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-8">
+        {% if sandbox_message %}
+        <div class="alert alert-info mb-4">
+            <strong>Test Mode:</strong> {{ sandbox_message }}
+        </div>
+        {% endif %}
+        
         <div class="payment-form">
             <h2 class="payment-header">Make a Payment</h2>
             
@@ -54,6 +60,43 @@
                 </div>
             </form>
         </div>
+        
+        {% if user.is_authenticated %}
+        <div class="text-center mt-4">
+            <a href="{% url 'payment_reports' %}" class="btn btn-outline-primary btn-lg w-100">
+                <i class="bi bi-graph-up"></i> View Payment Reports Dashboard
+            </a>
+        </div>
+        {% else %}
+        <div class="text-center mt-4">
+            <p class="text-muted mb-2">Need to view payment reports?</p>
+            <a href="{% url 'login' %}?next={% url 'payment_reports' %}" class="btn btn-outline-primary">
+                <i class="bi bi-graph-up"></i> Login to Access Reports
+            </a>
+        </div>
+        {% endif %}
+        
+        {% if sandbox_message %}
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                Sandbox Testing Information
+            </div>
+            <div class="card-body">
+                <h5>For testing in sandbox mode:</h5>
+                <ul>
+                    <li>Use any valid phone number with country code (e.g., 254712345678)</li>
+                    <li>For M-Pesa test payments, use the PIN <strong>0000</strong> when prompted</li>
+                    <li>For card payments, you can use test cards like:
+                        <ul>
+                            <li>Card number: 4242 4242 4242 4242</li>
+                            <li>Expiry date: Any future date</li>
+                            <li>CVV: Any 3 digits</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %} 

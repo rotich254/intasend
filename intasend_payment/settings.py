@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+import dj_database_url
+
+
+# Initialize environ
+env = environ.Env()
+# Read .environment file
+environ.Env.read_env(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.environment'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +29,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-es-j-yuo#0_5j%=(y=7%!$=ga7dtzeypy=$cc5sur(o3k*$)et'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
 
 
 # Application definition
@@ -43,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,11 +84,12 @@ WSGI_APPLICATION = 'intasend_payment.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=env('DATABASE_URL', default='sqlite:///db.sqlite3'),
+        conn_max_age=600
+    )
 }
+
 
 
 # Password validation
@@ -120,13 +130,89 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Whitenoise for static files
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Authentication Settings
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+
+# Message tags for Bootstrap alerts
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
 # Intasend API Settings
-INTASEND_PUBLISHABLE_KEY = 'ISPubKey_test_6c1d3827-a43d-4a83-8ad7-9f6801ea523e'
-INTASEND_SECRET_KEY = 'ISSecretKey_test_01d3fe24-787d-4c75-b253-92b7dc6e8c4e'
-INTASEND_TEST_MODE = True  # Set to False for production
+INTASEND_PUBLISHABLE_KEY = env('INTASEND_PUBLISHABLE_KEY')
+INTASEND_SECRET_KEY = env('INTASEND_SECRET_KEY')
+INTASEND_TEST_MODE = env.bool('INTASEND_TEST_MODE', default=True)
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'payment': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+# For secure cookie settings
+SESSION_COOKIE_SECURE = env.bool('SESSION_COOKIE_SECURE', default=True)
+CSRF_COOKIE_SECURE = env.bool('CSRF_COOKIE_SECURE', default=True)
+SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=True)
+SECURE_HSTS_SECONDS = env.int('SECURE_HSTS_SECONDS', default=31536000)  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool('SECURE_HSTS_INCLUDE_SUBDOMAINS', default=True)
+SECURE_HSTS_PRELOAD = env.bool('SECURE_HSTS_PRELOAD', default=True)
+
+# For development only
+if DEBUG:
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_SSL_REDIRECT = False
+    SECURE_HSTS_SECONDS = 0
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+    SECURE_HSTS_PRELOAD = False

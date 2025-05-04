@@ -1,0 +1,1 @@
+web: gunicorn intasend_payment.wsgi --log-file - 

@@ -7,10 +7,20 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-8">
+        {% if settings.INTASEND_TEST_MODE %}
+        <div class="alert alert-info mb-4">
+            <strong>Test Mode:</strong> This is a sandbox payment. No real money has been processed.
+        </div>
+        {% endif %}
+        
         {% if success %}
         <div class="success-message mb-4">
             <h2><i class="bi bi-check-circle-fill"></i> Payment Successful!</h2>
             <p>{{ message }}</p>
+            
+            {% if settings.INTASEND_TEST_MODE %}
+            <small class="d-block mt-2">This is a test payment in sandbox mode.</small>
+            {% endif %}
         </div>
         
         {% if payment %}
@@ -21,7 +31,25 @@
             <div class="card-body">
                 <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
                 <p><strong>Reference:</strong> {{ payment.reference }}</p>
-                <p><strong>Date:</strong> {{ payment.created_at }}</p>
+                <p><strong>Transaction ID:</strong> {{ payment.checkout_id }}</p>
+                <p>
+                    <strong>Payment Method:</strong> 
+                    {% if payment.payment_method == 'mpesa' %}
+                    <span class="badge bg-success">M-Pesa</span>
+                    {% elif payment.payment_method == 'card' %}
+                    <span class="badge bg-primary">Card Payment</span>
+                    {% elif payment.payment_method == 'google_pay' %}
+                    <span class="badge bg-info">Google Pay</span>
+                    {% elif payment.payment_method == 'bank' %}
+                    <span class="badge bg-dark">Bank Transfer</span>
+                    {% else %}
+                    <span class="badge bg-secondary">{{ payment.get_payment_method_display }}</span>
+                    {% endif %}
+                </p>
+                <p><strong>Date:</strong> {{ payment.created_at|date:"Y-m-d H:i" }}</p>
+                {% if payment.completed_at %}
+                <p><strong>Completed:</strong> {{ payment.completed_at|date:"Y-m-d H:i" }}</p>
+                {% endif %}
                 <p><strong>Status:</strong> {{ payment.get_status_display }}</p>
             </div>
         </div>
@@ -29,13 +57,57 @@
         
         {% else %}
         <div class="error-message mb-4">
-            <h2><i class="bi bi-x-circle-fill"></i> Payment Failed</h2>
+            <h2><i class="bi bi-x-circle-fill"></i> Payment Not Completed</h2>
             <p>{{ message }}</p>
+            
+            {% if settings.INTASEND_TEST_MODE %}
+            <small class="d-block mt-2">Note: This is only a test payment in sandbox mode.</small>
+            {% endif %}
+        </div>
+        
+        {% if payment %}
+        <div class="card mt-4">
+            <div class="card-header">
+                Payment Attempt Details
+            </div>
+            <div class="card-body">
+                <p><strong>Amount:</strong> {{ payment.amount }} {{ payment.currency }}</p>
+                <p><strong>Reference:</strong> {{ payment.reference }}</p>
+                {% if payment.checkout_id %}
+                <p><strong>Transaction ID:</strong> {{ payment.checkout_id }}</p>
+                {% endif %}
+                <p><strong>Date:</strong> {{ payment.created_at }}</p>
+                <p><strong>Status:</strong> {{ payment.get_status_display }}</p>
+                
+                <div class="alert alert-info mt-3">
+                    <h5>What to do next?</h5>
+                    <ul>
+                        <li>If your payment is still processing, please wait a few minutes and check the status again</li>
+                        <li>If you encountered an error, you can try again with a different payment method</li>
+                        <li>If you believe this is a technical issue, please contact support</li>
+                    </ul>
+                    
+                    {% if settings.INTASEND_TEST_MODE %}
+                    <div class="mt-3">
+                        <strong>Sandbox Testing Tips:</strong>
+                        <ul>
+                            <li>For M-Pesa payments, use PIN <strong>0000</strong> when prompted</li>
+                            <li>For card payments, use test number <strong>4242 4242 4242 4242</strong></li>
+                            <li>Ensure your phone number has a proper country code (e.g., 254...)</li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
         {% endif %}
+        {% endif %}
         
-        <div class="d-grid mt-4">
+        <div class="d-grid gap-2 mt-4">
             <a href="{% url 'home' %}" class="btn btn-primary">Back to Payment Form</a>
+            {% if payment %}
+            <a href="{% url 'payment_status' payment.id %}" class="btn btn-outline-secondary">Check Payment Status</a>
+            {% endif %}
         </div>
     </div>
 </div>
